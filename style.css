@@ -1,0 +1,93 @@
+/* Police générale */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fond dégradé noir/blanc */
+body {
+  background: linear-gradient(135deg, #000000, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Vagues roses néon en fond */
+.wave-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(255, 20, 147, 0.3), transparent 70%),
+    radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3), transparent 70%),
+    radial-gradient(circle at 50% 80%, rgba(255, 20, 147, 0.3), transparent 70%);
+  animation: moveWaves 20s linear infinite;
+  z-index: 0;
+}
+
+/* Animation de déplacement des vagues */
+@keyframes moveWaves {
+  0% {
+    background-position: 0% 0%, 100% 50%, 50% 100%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 50%, 50% 0%;
+  }
+}
+
+/* Conteneur du contenu */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+/* Titre */
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* Sous-titre */
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+/* Boutons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 30px;
+  background: #ff1493; /* rose néon */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #ff1493;
+}
+
+.btn:hover {
+  background: #e60085;
+  box-shadow: 0 0 20px #ff69b4;
+  color: #fff;
+}
